@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./partials/css/mien.css">
+
+    <title>Slider</title>
+</head>
+
+<body>
+    <div class="container">
+        <br><br>
+        <h1> Images Slider</h1>
+        <div id="img_overflow" class="over_container">
+            <div class="icons_slider">
+                <ul>
+                    <li class="closeIcone"><i onclick="closeFullscreen()" class="closeIcone fas fa-times"></i></li>
+                    <li id="expand"><i onclick="closeFullscreen()" class="fas fa-expand"></i></li>
+                    <li ><i onclick="closeFullscreen()" id="search-plus" class="fas fa-search-plus"></i></li>
+                    <li class="left_numberOfLeng"><span class="img_of"></span> / <span class="img_cpunt"></span></li>
+                </ul>
+            </div>
+            <i class="fas fa-arrow-alt-circle-right trans trans_right"></i>
+            <i class="fas fa-arrow-alt-circle-left trans trans_left"></i>
+            <img id="zoom" src="./public/images/1.jpg" alt="">
+            <div class="over_bg"></div>
+        </div>
+        <div class="images_parent">
+
+            <div class="top_image">
+                <img src="./public/images/1.jpg" alt="">
+            </div>
+
+            <div class="images_slider">
+                <div class="row cont_imag_row">
+                    <div class="imag_row col">
+                        <img src="./public/images/1.jpg" alt="">
+                    </div>
+                    <div class="imag_row col">
+                        <img src="./public/images/2.jpg" alt="">
+                    </div>
+                    <div class="imag_row col">
+                        <img src="./public/images/3.jpg" alt="">
+                    </div>
+                    <div class="imag_row col">
+                        <img src="./public/images/4.jpg" alt="">
+                    </div>
+                    <div class="imag_row col">
+                        <img src="./public/images/5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    var button = document.getElementById("expand");
+    var img = document.getElementById("img_overflow");
+    button.onclick = function() {
+        req = img.requestFullScreen || img.webkitRequestFullScreen || img.mozRequestFullScreen;
+        req.call(img);
+    }
+    function closeFullscreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+    </script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./partials/js/mien.js"></script>
+    <script src="./partials/js/view-bigimg.js"></script>
+</body>
+</html>

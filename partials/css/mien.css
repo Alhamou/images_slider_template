@@ -1,0 +1,110 @@
+@import url("./image_zoom.css");
+.images_parent{
+    background-color: azure;
+    width: 700px;
+    overflow: hidden;
+    margin: auto;
+}
+h1{
+    text-align: center
+}
+.cont_imag_row{
+    margin: 0px;
+    padding: 0px;
+}
+.top_image{
+    display: block;
+    height: 470px;
+}
+.top_image img {
+    height: 100%;
+}
+.images_slider{
+    position: relative;
+    width: 100%;
+    padding-top: 4px;
+}
+.imag_row{
+
+    padding: 3px;
+    background-color: #b6b6b6;
+}
+.imag_row img{
+    width: 100%;
+}
+.over_container{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 10;
+    height: 100vh;
+    text-align: center;
+    display: none;
+    overflow: hidden;
+    user-select:none;
+}
+.over_container img{
+    height: 100%;
+}
+.over_bg{
+    background-color: black;
+    opacity: .8;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    overflow: hidden;
+}
+.trans{
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    color: #474747;
+    cursor: pointer;
+}
+.trans_right{
+    right: 50px;
+}
+.trans_left{
+    left: 50px;
+}
+.icons_slider{
+    background-color: #1a1a1a;
+    height: 40px;
+    color: #646464;
+    position: absolute;
+    width: 100%;
+}
+.icons_slider ul{
+    list-style: none;
+    float: right;
+    direction: rtl;
+    right: 0px;
+}
+.icons_slider ul li{
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+.icons_slider ul li i{
+    padding: 12px;
+}
+.icons_slider ul li span{
+    padding: 8px;
+    display: inline-block;
+}
+
+.icons_slider ul li:hover{
+    background: #131313;
+    cursor: pointer;
+}
+.left_numberOfLeng{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    direction: ltr;
+}
+
